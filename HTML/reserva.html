@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve sua viagem conosco!</title>
+</head>
+<body>
+    <section>
+        <h1>Reserva de viagem</h1>
+        <form method="get" action="">
+        <fieldset>
+            <legend>Faça sua reserva aqui:</legend>
+            <label>Nome:</label><br>
+            <input type="text" required name="Nome"><br><br>
+            <label>E-mail:</label><br>
+            <input type="email" required name="Email" ><br><br>
+        </fieldset>
+    
+        <fieldset>
+            <legend>Serviços Desejados</legend>
+            <label>
+                <input type="checkbox" name="passagens" value="Passagens">Compra de Passagens<br>
+            </label>
+            <label>
+                <input type="checkbox" name="hospedagem" value="Hospedagem">Reserva de Hospedagem<br>
+            </label>
+            <label>
+                <input type="checkbox" name="veiculo" value="Veiculo">Aluguel de Veículos <br>
+            </label>
+        </fieldset>
+    
+        <fieldset>
+            <legend>Forma de Pagamento</legend>
+            <label>
+                <br><input type="radio" name="formaPagamento" value="Cartão de Crédito">Cartão de Crédito
+                <br><input type="radio" name="formaPagamento" value="Boleto">Boleto
+                <br><input type="radio" name="formaPagamento" value="PIX">PIX
+            </label>
+        </fieldset>
+    
+        <fieldset>
+            <legend>Prazo de Pagamento</legend>
+                <select name="prazoPagamento">
+                    <option value="a vista">À Vista</option>
+                    <option value="5vezessjuros">5 vezes sem juros</option>
+                    <option value="10vezescjuros">10 vezes com juros</option>
+                </select>
+        </fieldset>
+    
+           <BR>
+        <button name="Salvar">Salvar</button>
+    
+        </form> 
+</body>
+</html>
+

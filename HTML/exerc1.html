@@ -24,3 +24,66 @@
     
 </body>
 </html>
+
+<section class="container-fluid bg-light">
+    <h2>Contato</h2>
+    <form method="get" action="">
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <label>
+                Nome: <br>
+                <input type="text" name="nome"> <br><br>
+            </label>
+            <label>
+                E-mail: <br>
+                <input type="email" name="email"> <br><br>
+            </label>
+            <label>
+                Data de ida: <br>
+                <input type="date" name="dataIda"> <br><br>
+            </label>
+            <label>
+                Data de volta: <br>
+                <input type="date" name="dataVolta"> <br><br>
+            </label>
+            <label>
+                Quantidade de pessoas: <br>
+                <input type="number" name="qtdPessoas"> <br><br>
+            </label>
+            <label>
+                Comentário: <br>
+                <textarea name="comment" rows="5"></textarea> <br><br>
+            </label>
+        </fieldset>
+    </form>
+</section>
+
+<fieldset>
+    <legend>Qual a forma de pagamento?</legend>
+    <label>
+      <br /><input
+        type="radio"
+        name="formaPagamento"
+        value="Cartão de Crédito"
+      />Cartão de Crédito<br />
+      <br /><input
+        type="radio"
+        name="formaPagamento"
+        value="Boleto"
+      />Boleto<br />
+      <br /><input
+        type="radio"
+        name="formaPagamento"
+        value="PIX"
+      />PIX<br />
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Escolha o prazo para pagamento</legend>
+    <select name="prazoPagamento">
+      <option value="a vista">À Vista</option>
+      <option value="5x">5 vezes sem juros</option>
+      <option value="10x">10 vezes com juros</option>
+    </select>
+  </fieldset>
