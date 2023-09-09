@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="cadastroFunc">
+        <label>Nome:</label><br>
+        <input type="text" name="nome" id="nome"><br><br>
+        <label>Idade:</label><br>
+        <input type="number" name="idade" id="idade"><br><br>
+        <label>Cargo:</label><br>
+        <input type="text" name="cargo" id="cargo" ><br><br>
+        <label>Departamento:</label><br>
+        <input type="text" name="departamento" id="departamento"><br><br>
+        <label>Linguagem:</label><br>
+        <input type="text" name="linguagem" id="linguagem"><br><br>
+        <button type="submit" name="salvar" id="salvar">Salvar</button>
+    </form>
+</body>
+<script>
+class Funcionario{
+    constructor(nome, idade, cargo){
+        this.nome = nome;
+        this.idade = idade;
+        this.cargo = cargo;
+        this.funcao = true;
+    }
+    seApresentar(){
+        return("Olá, meu nome é " + this.nome + ", tenho " + this.idade + " anos e sou", this.cargo);
+    }
+    trabalhar(){
+        if(this.funcao){
+            alert("Trabalhando");
+            return;
+        } this.funcao = false;
+    }
+}
+
+class Gerente extends Funcionario{
+    constructor(nome, idade, cargo, departamento){
+        super(nome, idade, cargo);
+        this.departamento = departamento
+    }
+    gerenciar(){
+        if(this.cargo == "Gerente"){
+            alert("Sou gerente do departamento de " + this.departamento);
+            return;
+        } this.cargo = false;
+    }
+}
+
+class Desenvolvedor extends Funcionario{
+    constructor(nome, idade, cargo, linguagem){
+        super(nome, idade, cargo);
+        this.linguagem = linguagem;
+    }
+
+    programar(){
+        if(this.cargo == "Desenvolvedor"){
+            alert("Sou desenvolvedor na linguagem " + this.linguagem);
+            return;
+        } this.cargo = false;
+    }
+}
+
+function erroFunc(mensagem) {
+    document.getElementById("cadastroFunc").innerHTML = mensagem
+}
+
+try{
+    let nome = document.getElementById("nome").value; 
+    let idade = document.getElementById("idade").value;
+    let cargo = document.getElementById("cargo").value;
+    let departamento = document.getElementById("departamento").value;
+    let linguagem = document.getElementById("linguagem").value;
+
+    if(nome == "" || idade == "" || cargo == "" || departamento == "" || linguagem == ""){
+        throw new Error("Preencha todos os campos antes de continuar")
+    } 
+} catch(error){
+        erroFunc(error.message)
+    }
+
+
+
+    
+</script>
+</html>

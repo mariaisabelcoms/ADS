@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemento DOM</title>
+</head>
+<body>
+    <button onclick="confirmar()">Excluir item</button>
+</body>
+<script>
+//window.alert("Nosso primeiro alert")
+//window.confirm("Você deseja excluir esse item?")
+    //var nome = window.prompt("Qual é o seu nome?")
+    //var sobrenome = window.prompt("Qual é o seu sobrenome?")
+    //window.alert("O seu nome completo é: " + nome.toUpperCase() + " " + sobrenome.toUpperCase())
+        //var num1 = Number.parseFloat(window.prompt("Escolha um número"));
+        //var num2 = Number.parseFloat(window.prompt("Escolha outro número"));
+        //var soma = num1 + num2;
+        //window.alert(`A soma dos números escolhidos é: ` + soma)
+            function confirmar(){
+                let confirmacao = confirm("Você deseja excluir esse item?")
+                if(confirmacao){
+                    alert("Você irá excluir o item")
+                } else {
+                    alert("Operação cancelada")
+                }
+            }
+</script>
+</html>

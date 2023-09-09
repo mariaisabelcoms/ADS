@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "npm run string.js"
+  },
   "dependencies": {
     "readline-sync": "^1.4.10"
   }

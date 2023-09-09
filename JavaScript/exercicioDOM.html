@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício DOM</title>
+</head>
+<body>
+    <ul id="listaUL">
+
+    </ul>
+</body>
+<script>
+    let lista = document.getElementById("listaUL");
+
+    times = ["Palmeiras","Corinthians","São Paulo"]
+
+    for(let i = 0; i < times.length; i++){
+        var time = times[i];
+        var listItem = document.createElement("li")
+        listItem.innerHTML = time
+        listItem.style.border = '1px solid blue'
+        lista.appendChild(listItem);
+    }
+
+</script>
+</html>
