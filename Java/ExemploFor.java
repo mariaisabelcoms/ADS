@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class ExemploFor {
-    public static void main(String[]args) {
+    public static void main(java.lang.String[] args) {
 
         double nota1, nota2, media;
         Scanner input = new Scanner(System.in);
@@ -20,8 +20,6 @@ public class ExemploFor {
 
         }
 
-
-
-
+        input.close();
     }
 }

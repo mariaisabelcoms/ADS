@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-public class String {
+public class Strings {
 
-    public static void main(String[] args) {
+    public static void main(java.lang.String[] args) {
         
         Scanner teclado = new Scanner(System.in);
-        String matricula, nome, situacao, turma;
+        String matricula, nome, turma;
         double teste, prova, media;
 
         System.out.println("Digite a turma: ");
@@ -32,5 +32,8 @@ public class String {
             System.out.println("Média: " +  media);
 
         }
+
+        teclado.close();
+        
     }
 }
